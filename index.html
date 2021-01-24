@@ -5,15 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- function to resize -->
+       
+
     <title>Tomato</title>
 </head>
 <body>
+    
     <div class='navbar' id='topnav'>
-        <a href="#home" class="active">Home</a>
-        <a href="javascript:void(0);" class="icon" onclick='resize()'>
+        <a href="#home" class="active"><i class="fas fa-home"></i></a>
+        <a href="#test" class  = "drop">Login <i class="fas fa-sign-in-alt"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="resize()">
             <i class="fas fa-bars"></i>
         </a>
     </div>
     <p>This is a long paragraph in a p tag to see if the browser actually rearranges everything when the viewport is resized or if it's a small view-port. </p>
+    <script>
+        function resize() {
+            var x = document.getElementById("topnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "navbar";
+            }
+        }
+    </script>  
 </body>
 </html>
