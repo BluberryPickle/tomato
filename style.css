@@ -104,16 +104,20 @@ body{
 
 .box1 {
     position: relative;
-    background-image: url(/images/main.png);
+    background-color: rgb(226, 225, 225);
     margin-top: 70px;
     margin-left: 280px;
     width:20%;
     min-width: 190px;
-    height: 300px;
+    height: 250px;
     border: black;
     border-style: solid;
     border-radius: 25px;
     float: left;
+}
+
+.box1 img {
+    border-radius: 25px 25px 0 0;
 }
 
 .box2 {
@@ -131,3 +135,11 @@ body{
 
 }
 
+.img1_text {
+    padding: 2px 16px;
+  }
+
+.img1_text p {
+    position: relative;
+    left: 60px;
+}
