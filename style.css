@@ -73,6 +73,16 @@ body{
     }
 }
 
+/* Responsive cards */
+@media screen and (max-width: 520px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
 /*_______________________________________________________*/
 
 /* image */
@@ -95,39 +105,34 @@ body{
 
 }
 
+/* container */
+
 .container{
-    background-color: rgb(255, 255, 255); 
+    background-color:white; 
     margin: auto;
-    margin-top: 325px;
-    width: 80%;
+    margin-top: 372px;
+    width: 1140px;
     height:700px;
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
 }
-
-/* Columns */
-
-.column {
-    float: left;    
-    width: 25%;
-    padding: 0 10px;
-  }
 
 /* boxes */
 
 .box1 {
     position: relative;
     background-color: rgb(243, 242, 242);
-    margin-top: 70px;
-    margin-left: 280px;
-    width:20%;
     min-width: 190px;
-    height: 250px;
+    height: 325px;
     border-radius: 25px;
-    float: left;
 }
 
 .box1 img {
     border-radius: 25px 25px 0 0;
+    width: 100%;
+    display: block; 
 }
 
 .box1:hover {
@@ -140,27 +145,24 @@ body{
 
 .img1_text p {
     position: relative;
-    left: 52px;
-    top: -30px;
+    left: 105px;
+    top: -19px;
 }
 
-
 .box2 {
-    position: absolute;
+    position: relative;
     background-color: rgb(243, 242, 242);
-    margin-top: 70px;
-    margin-left: 550px;
-    width:16%;
     min-width: 190px;
-    height: 250px;
+    height: 325px;
     border-radius: 25px;
-    float: right;
-
 }
 
 .box2 img {
     border-radius: 25px 25px 0 0;
+    width: 100%;
+    display: block; 
 }
+
 
 .box2:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -172,18 +174,33 @@ body{
 
 .img2_text p {
     position: relative;
-    left: 52px;
-    top: -30px;
+    left: 100px;
+    top: -19px;
 }
-
-.box1 {
+.box3 {
     position: relative;
     background-color: rgb(243, 242, 242);
-    margin-top: 70px;
-    margin-left: 280px;
-    width:20%;
     min-width: 190px;
-    height: 250px;
+    height: 325px;
     border-radius: 25px;
-    float: left;
+}
+
+.box3 img {
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    display: block; 
+}
+
+.box3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.img3_text {
+    padding: 2px 16px;
+  }
+
+  .img3_text p {
+    position: relative;
+    left: 110   px;
+    top: -20px;
 }
