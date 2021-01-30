@@ -2,6 +2,10 @@ body{
     margin:0;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
 /* Code for navbar */
 
 .navbar {
@@ -92,7 +96,7 @@ body{
 }
 
 .container{
-   /* background-color: black; */
+    background-color: rgb(255, 255, 255); 
     margin: auto;
     margin-top: 325px;
     width: 80%;
@@ -100,18 +104,24 @@ body{
 
 }
 
+/* Columns */
+
+.column {
+    float: left;    
+    width: 25%;
+    padding: 0 10px;
+  }
+
 /* boxes */
 
 .box1 {
     position: relative;
-    background-color: rgb(226, 225, 225);
+    background-color: rgb(243, 242, 242);
     margin-top: 70px;
     margin-left: 280px;
     width:20%;
     min-width: 190px;
-    height: 200px;
-    border: black;
-    border-style: solid;
+    height: 250px;
     border-radius: 25px;
     float: left;
 }
@@ -120,20 +130,9 @@ body{
     border-radius: 25px 25px 0 0;
 }
 
-.box2 {
-    position: relative;
-    background-color: blue;
-    margin-top: 70px;
-    margin-right: 280px;
-    width:20%;
-    min-width: 190px;
-    height: 300px;
-    border: black;
-    border-style: solid;
-    border-radius: 25px;
-    float: right;
-
-}
+.box1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
 .img1_text {
     padding: 2px 16px;
@@ -141,6 +140,50 @@ body{
 
 .img1_text p {
     position: relative;
-    left: 60px;
+    left: 52px;
     top: -30px;
+}
+
+
+.box2 {
+    position: absolute;
+    background-color: rgb(243, 242, 242);
+    margin-top: 70px;
+    margin-left: 550px;
+    width:16%;
+    min-width: 190px;
+    height: 250px;
+    border-radius: 25px;
+    float: right;
+
+}
+
+.box2 img {
+    border-radius: 25px 25px 0 0;
+}
+
+.box2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .img2_text {
+    padding: 2px 16px;
+  }
+
+.img2_text p {
+    position: relative;
+    left: 52px;
+    top: -30px;
+}
+
+.box1 {
+    position: relative;
+    background-color: rgb(243, 242, 242);
+    margin-top: 70px;
+    margin-left: 280px;
+    width:20%;
+    min-width: 190px;
+    height: 250px;
+    border-radius: 25px;
+    float: left;
 }
