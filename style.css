@@ -111,11 +111,11 @@ body{
     background-color:white; 
     margin: auto;
     margin-top: 372px;
-    width: 1140px;
+    max-width: 830px;
     height:700px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+    gap: 25px;
     
 }
 
@@ -145,7 +145,7 @@ body{
 
 .img1_text p {
     position: relative;
-    left: 105px;
+    text-align: center;
     top: -19px;
 }
 
@@ -174,7 +174,7 @@ body{
 
 .img2_text p {
     position: relative;
-    left: 100px;
+    text-align: center;
     top: -19px;
 }
 .box3 {
@@ -201,6 +201,6 @@ body{
 
   .img3_text p {
     position: relative;
-    left: 110   px;
-    top: -20px;
+    text-align: center;
+    top: -15px;
 }
