@@ -121,7 +121,7 @@ body{
 
 /* boxes */
 
-.box1 {
+.box {
     position: relative;
     background-color: rgb(243, 242, 242);
     min-width: 190px;
@@ -129,13 +129,13 @@ body{
     border-radius: 25px;
 }
 
-.box1 img {
+.box img {
     border-radius: 25px 25px 0 0;
     width: 100%;
     display: block; 
 }
 
-.box1:hover {
+.box:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
@@ -149,25 +149,6 @@ body{
     top: -19px;
 }
 
-.box2 {
-    position: relative;
-    background-color: rgb(243, 242, 242);
-    min-width: 190px;
-    height: 325px;
-    border-radius: 25px;
-}
-
-.box2 img {
-    border-radius: 25px 25px 0 0;
-    width: 100%;
-    display: block; 
-}
-
-
-.box2:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
   .img2_text {
     padding: 2px 16px;
   }
@@ -177,23 +158,6 @@ body{
     text-align: center;
     top: -19px;
 }
-.box3 {
-    position: relative;
-    background-color: rgb(243, 242, 242);
-    min-width: 190px;
-    height: 325px;
-    border-radius: 25px;
-}
-
-.box3 img {
-    border-radius: 25px 25px 0 0;
-    width: 100%;
-    display: block; 
-}
-
-.box3:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
 
 .img3_text {
     padding: 2px 16px;
