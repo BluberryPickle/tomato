@@ -140,7 +140,7 @@ body{
   }
 
 .img1_text {
-    padding: 2px 16px;
+    padding: 0px 16px;
   }
 
 .img1_text p {
@@ -150,7 +150,8 @@ body{
 }
 
   .img2_text {
-    padding: 2px 16px;
+    padding: 0px 16px;
+    width: 100%;
   }
 
 .img2_text p {
@@ -160,7 +161,7 @@ body{
 }
 
 .img3_text {
-    padding: 2px 16px;
+    padding: 0px 16px;
     
   }
 
@@ -170,4 +171,38 @@ body{
     font-size: 32px;
 }
 
-/* Menu boxes */
+/* Button */
+
+.button1 {
+    transition-duration: 0.4s;
+    position: relative;
+    border: thin;
+    background-color: rgb(141, 238, 44);
+    padding: 15px 32px;
+    font-size: 18px;
+    /*width: 130px; */
+    width: 55%;
+    border-radius: 0 0 0 25px ;
+    top: -43px;
+    left: -16px;
+    outline: 0;
+}
+
+.button1:hover{
+    background-color: rgb(141, 238, 44); 
+    color: white;
+}
+
+.button2 {
+    position: relative;
+    padding: 15px 32px;
+    font-size: 18px;
+    background-color: white;
+    border-color: red;
+    /*width: 129px; */
+    width: 55%;
+    border-radius: 0 0 25px 0;
+    top: -95px;
+    right: -117px;
+    outline: 0;
+}
