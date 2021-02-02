@@ -145,8 +145,8 @@ body{
 
 .img1_text p {
     position: relative;
-    text-align: center;
     top: -19px;
+    font-size: 32px;
 }
 
   .img2_text {
@@ -155,16 +155,19 @@ body{
 
 .img2_text p {
     position: relative;
-    text-align: center;
     top: -19px;
+    font-size: 32px;
 }
 
 .img3_text {
     padding: 2px 16px;
+    
   }
 
   .img3_text p {
     position: relative;
-    text-align: center;
     top: -15px;
+    font-size: 32px;
 }
+
+/* Menu boxes */
