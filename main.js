@@ -10,13 +10,24 @@ function properties() {
         var img_div = document.getElementById('img'+count+'_text');
         var para = document.createElement('p');
         img_div.appendChild(para);
-        para.style = " font-size :30px";
+        para.style = "font-size :30px; top:-20px;";
         var text = document.createTextNode(items[count-1]);
         para.appendChild(text)
         para = document.createElement('p');
         img_div.appendChild(para);
+        para.style = "font-size :24px; top: -35px;";
         text = document.createTextNode(cost[count-1]);
-        para.appendChild(text)
+        para.appendChild(text);
+        var button = document.createElement('button');
+        img_div.appendChild(button);
+        button.className='button1';
+        button.id='add'+count;
+        document.getElementById("add"+count).innerHTML='<i class="fas fa-cart-plus"></i>';
+        button = document.createElement('button'); /*quantity button */
+        img_div.appendChild(button);
+        button.className='button2';
+        button.id='qty'+count;
+        document.getElementById('qty'+count).innerHTML='Qty'
     }
 }
 
