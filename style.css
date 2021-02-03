@@ -186,12 +186,19 @@ body{
     top: -43px;
     left: -16px;
     outline: 0;
+    box-shadow: 0 9px #999;
 }
 
 .button1:hover{
     background-color: rgb(141, 238, 44); 
     color: white;
 }
+
+.button1:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 .button2 {
     position: relative;
@@ -205,4 +212,11 @@ body{
     top: -95px;
     right: -117px;
     outline: 0;
+    box-shadow: 0 9px #999;
 }
+
+.button2:active {
+    background-color: #bdbdbd;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
