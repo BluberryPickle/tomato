@@ -1,38 +1,37 @@
 //function to set the properties of menu cards.
 function properties() {
-    //Lists of items and cost respectively.
-    var items = ['Al-Faham','Chicken Curry','Fish Curry']; 
-    var cost = ['₹400','₹300','₹200'];
+    var items = ['Al-Faham','Chicken Curry','Fish Curry']; //li of items
+    var cost = ['₹400','₹300','₹200']; //li of costs
+    var place = ['Cook door','Copper Spoon','Pepper Restaurant ']
     var count;
     for (count = 1 ; count < 4 ; count++ ){ //Loop to set the properties of each card.
         var box = document.getElementById('box'+count);
-        box.style.height='400px';
+        box.style.height='450px';
         var img_div = document.getElementById('img'+count+'_text');
-        var para = document.createElement('p');
+        var para = document.createElement('h1');
         img_div.appendChild(para);
-        para.style = "font-size :30px; top:-20px;";
         var text = document.createTextNode(items[count-1]);
         para.appendChild(text)
-        para = document.createElement('p');
+        para = document.createElement('h2');
         img_div.appendChild(para);
-        para.style = "font-size :24px; top: -35px;";
         text = document.createTextNode(cost[count-1]);
         para.appendChild(text);
+        para = document.createElement("h2");
+        img_div.appendChild(para);
+        text = document.createTextNode(place[count-1]);
+        para.appendChild(text)
         var button = document.createElement('button');
         img_div.appendChild(button);
         button.className='button1';
         button.id='add'+count;
         document.getElementById("add"+count).innerHTML='<i class="fas fa-cart-plus"></i>';
-        button = document.createElement('button'); /*quantity button */
-        img_div.appendChild(button);
-        button.className='button2';
-        button.id='qty'+count;
-        document.getElementById('qty'+count).innerHTML='Qty'
     }
 }
 
 //Function to replace html contents
 function replace() {
+    document.getElementById("main_text").innerHTML=" ";
+    document.getElementById("main_text").innerHTML='<p style="font-size: 34px;">Explore our wide variety of Non-veg dishes!</p> '
     document.getElementById("container").innerHTML=" ";
     var container = document.getElementById('container');
     var c= 'box';
@@ -48,12 +47,10 @@ function replace() {
         var div = document.getElementById(bnum);
         div.appendChild(img);
         img.src="images/"+inum+".jpg";
-        img.width="100%";
-        img.style="height: 243px";
         var text_div = document.createElement('div');
         box.appendChild(text_div);
         var cid = 'img'+count+'_text';
-        text_div.className=cid;
+        text_div.className='img_text';
         text_div.id = cid;
     }
     properties()
