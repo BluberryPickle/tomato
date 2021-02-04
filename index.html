@@ -19,35 +19,52 @@
     </div>
     <div class="main_image">    
         <div class="image_text">
-            <p class="style1" style="font-size: 80px; color:white"><b><i>Tomato</i></b>
+            <p style="font-size: 80px; color:white"><b><i>Tomato</i></b></p>
             <br>
         </div>
+        <div class="byline">
+            <p style="font-size: 40px; color:white;">Order food online!</p>
+        </div>
+    </div>
+    <div class="main_text" id = "main_text">
+        <p style="font-size: 34px;">Click to explore our Menu</p>
     </div>
     <div class="container" id = "container">
         <div class="box"  onclick="replace()">
             <img src="images/non.jpeg" style="height: 243px;">
-            <div class="img1_text">
+            <div class="img_text">
                 <p style = "text-align: center;"><b>Non-Veg</b></p>
             </div>
         </div>
 
         <div class="box">
             <img src="images/veg.jpg" style="height: 243px;">
-            <div class="img2_text">
+            <div class="img_text">
                 <p style = "text-align: center;" ><b>Pure Veg</b></p>
             </div>
         </div>
 
         <div class="box">
             <img src="images/pizza.jpg" style="height: 243px;"> 
-            <div class="img3_text">
+            <div class="img_text">
                 <p style = "text-align: center;"><b>Others</b></p>
             </div>
         </div>
+        <div class="order_bar">
+            <div class="order_num">
+                <p>Your order</p>
+            </div> 
+            <div class="total">
+                <p>Subtotal:</p>
+            </div>
+            <button type="button" class="cont">Continue</button>
+        </div>
     </div>
+   
     
     
-    <!-- function to resize -->
+    
+    <!-- function to resize navbar-->
     <script>
         function resize() {
             var x = document.getElementById("topnav");
