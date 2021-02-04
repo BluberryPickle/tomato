@@ -1,3 +1,5 @@
+/* Body */
+
 body{
     margin:0;
 }
@@ -21,6 +23,7 @@ body{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: sans-serif;
 }
 
 .navbar a:hover {
@@ -102,7 +105,23 @@ body{
     position: relative;;
     margin-top: 98px;
     text-align: center;
+}
 
+.byline p {
+    position: relative;
+    text-align: center;
+    margin-top: -75px;
+}
+
+/*text */
+
+.main_text {
+    position: relative;
+    margin: auto;
+    max-width: 830px;
+    margin-top: 365px;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 
 /* container */
@@ -110,7 +129,7 @@ body{
 .container{
     background-color:white; 
     margin: auto;
-    margin-top: 372px;
+    margin-top: 44px;
     max-width: 830px;
     height:700px;
     display: grid;
@@ -119,7 +138,7 @@ body{
     
 }
 
-/* boxes */
+/* box */
 
 .box {
     position: relative;
@@ -127,66 +146,58 @@ body{
     min-width: 190px;
     height: 325px;
     border-radius: 25px;
+    font-family: sans-serif;
 }
 
 .box img {
     border-radius: 25px 25px 0 0;
     width: 100%;
-    display: block; 
+    height: 243px;
 }
 
 .box:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
-.img1_text {
+  /* img_text div */
+
+.img_text {
     padding: 0px 16px;
   }
 
-.img1_text p {
+.img_text p {
     position: relative;
     top: -19px;
     font-size: 32px;
 }
 
-  .img2_text {
-    padding: 0px 16px;
-    width: 100%;
-  }
-
-.img2_text p {
+.img_text h1 {
     position: relative;
-    top: -19px;
-    font-size: 32px;
+    top: -16px;
+    padding-bottom: 0%;
 }
 
-.img3_text {
-    padding: 0px 16px;
-    
-  }
-
-  .img3_text p {
-    position: relative;
-    top: -15px;
-    font-size: 32px;
+.img_text h2 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-weight: 500;
 }
 
 /* Button */
 
 .button1 {
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
     position: relative;
     border: thin;
     background-color: rgb(141, 238, 44);
     padding: 15px 32px;
     font-size: 18px;
-    /*width: 130px; */
-    width: 55%;
-    border-radius: 0 0 0 25px ;
-    top: -43px;
+    width: 114%;
+    border-radius: 0 0 25px 25px ;
+    top: 14px;
     left: -16px;
     outline: 0;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px  #999;
 }
 
 .button1:hover{
@@ -201,12 +212,12 @@ body{
   }
 
 .button2 {
+    transition-duration: 0.3s;
     position: relative;
     padding: 15px 32px;
     font-size: 18px;
     background-color: white;
     border-color: red;
-    /*width: 129px; */
     width: 55%;
     border-radius: 0 0 25px 0;
     top: -95px;
@@ -220,3 +231,36 @@ body{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+/* Order_bar */
+
+.order_bar {
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+    background-color:rgb(240, 240, 240);
+    bottom: 0;
+    width: 55%;
+    font-size: 20px;
+    display: block;
+}
+
+.order_num{
+    float: left;
+}
+
+.cont{
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+    float: right;
+    background-color: rgb(4, 216, 4);
+    font-size: 24px;
+    font-family: sans-serif;
+    border: thin;
+}
+
+.total{
+    float: right;
+}
+
