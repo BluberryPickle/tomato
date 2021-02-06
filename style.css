@@ -240,24 +240,37 @@ body{
     overflow: hidden;
     background-color:rgb(240, 240, 240);
     bottom: 0;
+    left: 350px;
     width: 55%;
     font-size: 20px;
-    display: block;
+    display: none;
 }
+
 
 .order_num{
     float: left;
 }
 
+.order_num p {
+    display: inline-block;
+}
+
 .cont{
     position: relative;
-    top: 15px;
+    top: 17px;
     margin-right: 10px;
     float: right;
     background-color: rgb(4, 216, 4);
     font-size: 24px;
     font-family: sans-serif;
     border: thin;
+    border-radius: 10px;
+    outline: 0;
+}
+
+.cont:active{
+    background-color: rgb(11, 196, 11);
+    transform: translateY(2px);
 }
 
 .total{
