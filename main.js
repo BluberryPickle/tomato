@@ -1,3 +1,4 @@
+
 //function to set the properties of menu cards.
 function properties() {
     var items = ['Al-Faham','Chicken Curry','Fish Curry']; //li of items
@@ -22,9 +23,12 @@ function properties() {
         para.appendChild(text)
         var button = document.createElement('button');
         img_div.appendChild(button);
+        var bid = 'add'+count;
         button.className='button1';
-        button.id='add'+count;
-        document.getElementById("add"+count).innerHTML='<i class="fas fa-cart-plus"></i>';
+        button.id=bid;
+        document.getElementById(bid).innerHTML='<i class="fas fa-cart-plus"></i>';
+        button.onclick=quantity;
+
     }
 }
 
@@ -55,3 +59,14 @@ function replace() {
     }
     properties()
 }
+
+function quantity() {
+    /*document.getElementById('add1').innerHTML='<p> done </p>' */
+    document.getElementById('obar').style.display="block";
+    var num = document.getElementById("onum").innerText;
+    alert(parseInt(num,10));
+    document.getElementById('onum').innerHTML='<p>Your order: '+tot+' </p>'; 
+
+}
+
+
