@@ -22,12 +22,16 @@ function properties() {
         text = document.createTextNode(place[count-1]);
         para.appendChild(text)
         var button = document.createElement('button');
+        button.type='button'
+        button.addEventListener('click',function(){
+            id = this.id
+            quantity(id);
+        });
         img_div.appendChild(button);
         var bid = 'add'+count;
         button.className='button1';
         button.id=bid;
         document.getElementById(bid).innerHTML='<i class="fas fa-cart-plus"></i>';
-        button.onclick=quantity;
 
     }
 }
@@ -60,13 +64,32 @@ function replace() {
     properties()
 }
 
-function quantity() {
+/*function to store*/
+
+function storage(id) {
+    if(sessionStorage.getItem(id)==null){
+        sessionStorage.setItem(id,1);
+    }
+    else {
+        var old = Number(sessionStorage.getItem(id));
+        old++;
+        sessionStorage.setItem(id,old);
+    }
+}
+
+function quantity(id) {
     /*document.getElementById('add1').innerHTML='<p> done </p>' */
     document.getElementById('obar').style.display="block";
-    var num = document.getElementById("onum").innerText;
-    alert(parseInt(num,10));
-    document.getElementById('onum').innerHTML='<p>Your order: '+tot+' </p>'; 
-
+    var p = document.getElementById("op");
+    var num = p.innerHTML;
+    num++;
+    document.getElementById('op').innerHTML=num; 
+    var price = {add1:'400',add2:'300',add3:'200'};
+    var tot = document.getElementById('tot');
+    var subtot = tot.innerHTML;
+    subtot = (Number(subtot) + Number(price[id]));
+    tot.innerHTML=subtot;
+    storage(id);
 }
 
 
