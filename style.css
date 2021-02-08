@@ -127,7 +127,6 @@ body{
 /* container */
 
 .container{
-    background-color:white; 
     margin: auto;
     margin-top: 44px;
     max-width: 830px;
