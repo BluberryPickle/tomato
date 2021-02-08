@@ -67,18 +67,21 @@ function replace() {
 /*function to store*/
 
 function storage(id) {
-    if(sessionStorage.getItem(id)==null){
-        sessionStorage.setItem(id,1);
+    var cart = {};
+    if(sessionStorage.getItem('cart')==null){
+        cart[id]=1;
+        sessionStorage.setItem('cart',JSON.stringify(cart));
     }
     else {
-        var old = Number(sessionStorage.getItem(id));
-        old++;
-        sessionStorage.setItem(id,old);
+        var rcart = JSON.parse(sessionStorage.getItem('cart'));
+        var old = Number(rcart[id]);
+        old++
+        rcart[id]=old;
+        sessionStorage.setItem('cart',JSON.stringify(rcart));
     }
 }
 
 function quantity(id) {
-    /*document.getElementById('add1').innerHTML='<p> done </p>' */
     document.getElementById('obar').style.display="block";
     var p = document.getElementById("op");
     var num = p.innerHTML;
