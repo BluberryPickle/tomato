@@ -5,7 +5,7 @@ function retrieve() {
     var i ;
     var container = document.getElementById('container');
     for (i=1; i < 4; i++){
-        if (cart['add'+i]!=undefined){
+        if (cart['add'+i]>0){
             var iblock = document.createElement('div');
             container.appendChild(iblock);
             iblock.className = 'iblock';

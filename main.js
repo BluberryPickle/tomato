@@ -67,17 +67,26 @@ function replace() {
 /*function to store*/
 
 function storage(id) {
-    var cart = {};
     if(sessionStorage.getItem('cart')==null){
+        alert('if')
+        var cart = {}
         cart[id]=1;
         sessionStorage.setItem('cart',JSON.stringify(cart));
     }
     else {
+        alert('else')
         var rcart = JSON.parse(sessionStorage.getItem('cart'));
-        var old = Number(rcart[id]);
-        old++
-        rcart[id]=old;
-        sessionStorage.setItem('cart',JSON.stringify(rcart));
+        if (rcart[id]==null){
+            rcart[id]=1;
+        }
+        else {
+            var rcart = JSON.parse(sessionStorage.getItem('cart'));
+            var old = Number(rcart[id]);
+            old++;
+            rcart[id]=old;
+            sessionStorage.setItem('cart',JSON.stringify(rcart));
+    
+        }
     }
 }
 
