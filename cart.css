@@ -71,13 +71,17 @@ body {
 .container {
     margin: auto;
     max-width: 1200px;
-    height: 500px;
 }
 
 /*iblock */
 
-.iblock * {
+.iblock{
+    
     padding-top: 20px;
+}
+
+.iblock * {
+    position: relative;
     display: inline-block;
 }
 
@@ -87,18 +91,51 @@ body {
 
 /* text div */
 
+.text{
+    position: relative;
+    top: -45px;
+}
+
 .text * {
     font-family: sans-serif;
     display: block;
     padding-left: 20px;
+    padding-bottom: 30px ;
     margin: 0;
-    padding-bottom: 10px;
     box-sizing: border-box;
 
 }
 
-.text h1 {
+/* Price Div */
+
+.price {
     position: relative;
-    padding-top: 25px;
+    float:  right;
+    top: 30px;
+    font-family: sans-serif;
+}
+
+.price p {
+    padding: 0;
+    font-size: 18px;
+}
+
+/*pay bar */
+.pay{
+    margin: auto;
+    position: fixed;
+    overflow: hidden;
+    background-color:rgb(240, 240, 240);
+    bottom: 0;
+    width: 1200px;
+}
+
+.pay_but {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom:10px ;
 }
 
