@@ -76,8 +76,9 @@ function storage(id) {
     else {
         alert('else')
         var rcart = JSON.parse(sessionStorage.getItem('cart'));
-        if (rcart[id]==null){
+        if (rcart[id]==undefined){
             rcart[id]=1;
+            sessionStorage.setItem('cart',JSON.stringify(rcart));
         }
         else {
             var rcart = JSON.parse(sessionStorage.getItem('cart'));
@@ -88,7 +89,7 @@ function storage(id) {
     
         }
     }
-}
+}   
 
 function quantity(id) {
     document.getElementById('obar').style.display="block";
