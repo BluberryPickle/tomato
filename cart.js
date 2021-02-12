@@ -1,11 +1,13 @@
 function retrieve() {
     var items = ['Al-Faham','Chicken Curry','Fish Curry'];
     var place = ['Cook door','Copper Spoon','Pepper Restaurant ']
-    cart = JSON.parse(sessionStorage.getItem('cart'));
+    var cost = ['400','300','200'];
+    var cart = JSON.parse(sessionStorage.getItem('cart'));
     var i ;
     var container = document.getElementById('container');
     for (i=1; i < 4; i++){
-        if (cart['add'+i]>0){
+        var num = Number(cart['add'+i]);
+        if (num>0){
             var iblock = document.createElement('div');
             container.appendChild(iblock);
             iblock.className = 'iblock';
@@ -22,6 +24,10 @@ function retrieve() {
             div.appendChild(p);
             p.style.fontSize='25px';
             p.innerHTML=place[i-1];
+            var price = document.createElement('div')
+            iblock.appendChild(price);
+            price.className='price';
+            price.innerHTML='<p><b>QTY: '+num+'</b></p><br><p><b>Cost: ₹'+(num*Number(cost[i-1]))+'</b></p>'
 
         }
     }
