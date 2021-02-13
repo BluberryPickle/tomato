@@ -27,8 +27,25 @@ function retrieve() {
             var price = document.createElement('div')
             iblock.appendChild(price);
             price.className='price';
-            price.innerHTML='<p><b>QTY: '+num+'</b></p><br><p><b>Cost: ₹'+(num*Number(cost[i-1]))+'</b></p>'
-
+            var total = (num*Number(cost[i-1]));
+            price.innerHTML='<p><b>QTY: '+num+'</b></p><br><p><b>Cost: ₹'+total+'</b></p>'
+            if (sessionStorage.getItem('subtot')==null) {
+                sessionStorage.setItem('subtot',total);
+            }
+            else {
+                total = Number(sessionStorage.getItem('subtot'))+Number(total);
+                sessionStorage.setItem('subtot',total);
+            }
         }
     }
+            var paybar = document.getElementById('pay');
+            var payamount = document.createElement('div');
+            payamount.className='pclass';
+            paybar.appendChild(payamount);
+            payamount.innerHTML='<p> Subtotal : '+Number(sessionStorage.getItem('subtot'))+' </p>';    
+}
+
+function check() {
+    var stat = sessionStorage.getItem('stat');
+    /*Code to be added here after login page finishsed */
 }
