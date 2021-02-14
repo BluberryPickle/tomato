@@ -1,4 +1,13 @@
 
+// function to see if the user has logged in or not 
+function statSet(){     
+    var stat;
+    if (sessionStorage.getItem('stat')==null){
+        stat = 'out';
+        sessionStorage.setItem('stat',stat);
+    }
+}
+
 //function to set the properties of menu cards.
 function properties() {
     var items = ['Al-Faham','Chicken Curry','Fish Curry']; //li of items
