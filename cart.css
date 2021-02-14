@@ -143,11 +143,21 @@ body {
     border: 10px;
 }
 
+.pay_but:active{
+    background-color: rgb(11, 196, 11);
+    transform: translateY(2px);
+}
+
 .pclass {
     float: right;
     padding-right: 10px;
     font-size: 19px;
     font-weight: 500;
     font-family: sans-serif;
+}
+
+.cont:active{
+    background-color: rgb(11, 196, 11);
+    transform: translateY(2px);
 }
 
