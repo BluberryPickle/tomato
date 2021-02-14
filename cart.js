@@ -47,5 +47,7 @@ function retrieve() {
 
 function check() {
     var stat = sessionStorage.getItem('stat');
-    /*Code to be added here after login page finishsed */
+    if (stat == "out") {
+        
+    }
 }
