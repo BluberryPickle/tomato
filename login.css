@@ -10,6 +10,7 @@ body {
     font-family: sans-serif;
     background-color: seashell;
     box-shadow: 0 16px 16px 0 rgba(0,0,0,0.3);
+    padding-bottom: 20px;
 
 }
 
@@ -54,5 +55,16 @@ form input[type="submit"] {
 
 .login p {
     text-align: center;
+}
+
+.back{
+    width: 100%;
+    padding: 15px;
+    background-color: red;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
 }
 
