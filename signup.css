@@ -28,13 +28,14 @@ form input[type="submit"] {
 }
 .container {
     position: relative;
-    top: 130px;
+    top: 95px;
     width: 500px;
 	margin: 0 auto;
     border:solid;
     font-family: sans-serif;
     background-color: seashell;
     box-shadow: 0 16px 16px 0 rgba(0,0,0,0.3);
+    padding-bottom: 20px;
 
 }
 
@@ -42,4 +43,23 @@ form input[type="submit"] {
     width: 300px;
 	margin: 0 auto;
     top: 50px;
+}
+
+.signup h1 {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 30px;
+    padding: 20px 0 20px 0;
+    font-family: sans-serif;
+}
+
+.back{
+    width: 100%;
+    padding: 15px;
+    background-color: red;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
 }
