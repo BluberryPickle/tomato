@@ -77,13 +77,11 @@ function replace() {
 
 function storage(id) {
     if(sessionStorage.getItem('cart')==null){
-        alert('if')
         var cart = {}
         cart[id]=1;
         sessionStorage.setItem('cart',JSON.stringify(cart));
     }
     else {
-        alert('else')
         var rcart = JSON.parse(sessionStorage.getItem('cart'));
         if (rcart[id]==undefined){
             rcart[id]=1;
