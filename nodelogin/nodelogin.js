@@ -5,9 +5,9 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'pass',
+	host     : "localhost",
+	user     : "root",
+	password : '',
 	database : 'nodelogin'
 });
 
@@ -35,11 +35,11 @@ app.post('/auth', function(request, response) {
 	var password = request.body.password;
 	if (username && password) {
 		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?;', [username, password], function(error, results, fields){
-			console.log(username)
 			if (results.length > 0){
+				console.log('success')
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('/index.html');
+				response.redirect('/');
 			}
 			else {
 				response.send('Incorrect Username and/or Password!');
@@ -52,8 +52,8 @@ app.post('/auth', function(request, response) {
 		response.end();	
 	}
 });
-
-app.get('/home', function(request, response) {
+console.log('line56')
+app.get('/', function(request, response) {
 	if (request.session.loggedin) {
 		response.send('Welcome back, ' + request.session.username + '!');
 	} else {
