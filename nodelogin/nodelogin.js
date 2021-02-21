@@ -17,6 +17,7 @@ connection.connect(function(err) {
   });
 
 var app = express();
+app.use(express.static('nodelogin'))
 app.use(session({
     secret: 'secret',
 	resave: true,
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
-	response.sendFile(path.join(__dirname + '/login.html'));
+	response.sendFile(path.join(__dirname+"/index.html"));
 });
 
 app.post('/auth', function(request, response) {
@@ -39,7 +40,6 @@ app.post('/auth', function(request, response) {
 				console.log('success')
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('/');
 			}
 			else {
 				response.send('Incorrect Username and/or Password!');
@@ -51,15 +51,7 @@ app.post('/auth', function(request, response) {
 		response.send('Please enter Username and Password!');
 		response.end();	
 	}
-});
-console.log('line56')
-app.get('/', function(request, response) {
-	if (request.session.loggedin) {
-		response.send('Welcome back, ' + request.session.username + '!');
-	} else {
-		response.send('Please login to view this page!');
-	}
-	response.end();
-});
+});;
+
 
 app.listen(3000);
