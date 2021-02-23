@@ -1,9 +1,28 @@
+function reset() {
+    var a = document.getElementById('drop')
+    sessionStorage.setItem('stat','out')
+    a.href = "index.html"
+    sessionStorage.clear();
+}
+
 function retrieve() {
+    if (sessionStorage.getItem('stat')=='in') {
+        var a = document.getElementById('drop')
+        a.innerHTML='Logout'
+        a.addEventListener('click',function(){
+            reset();
+        });
+    }
+
     var items = ['Al-Faham','Chicken Curry','Fish Curry'];
     var place = ['Cook door','Copper Spoon','Pepper Restaurant ']
     var cost = ['400','300','200'];
     var cart = JSON.parse(sessionStorage.getItem('cart'));
-    var i ;
+    if (cart==null){
+        alert('Your cart is empty')
+    }
+    else {
+        var i ;
     var container = document.getElementById('container');
     for (i=1; i < 4; i++){
         var num = Number(cart['add'+i]);
@@ -43,11 +62,18 @@ function retrieve() {
             payamount.className='pclass';
             paybar.appendChild(payamount);
             payamount.innerHTML='<p> Subtotal : '+Number(sessionStorage.getItem('subtot'))+' </p>';    
-}
+
+    }
+    }
+
+
 
 function check() {
     var stat = sessionStorage.getItem('stat');
     if (stat == "out") {
-        
+        window.location = "/login.html";
+    }
+    else {
+        alert('done')
     }
 }

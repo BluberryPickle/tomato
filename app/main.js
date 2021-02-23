@@ -1,10 +1,25 @@
 
+function reset() {
+    var a = document.getElementById('drop')
+    sessionStorage.setItem('stat','out')
+    a.href = "index.html"
+    sessionStorage.clear();
+}
 // function to see if the user has logged in or not 
 function statSet(){     
     var stat;
+    console.log("stat",sessionStorage.getItem('stat'))
     if (sessionStorage.getItem('stat')==null){
         stat = 'out';
         sessionStorage.setItem('stat',stat);
+    }
+    else if (sessionStorage.getItem('stat')=='in') {
+        console.log(sessionStorage.getItem('stat'))
+        var a = document.getElementById('drop')
+        a.innerHTML='Logout'
+        a.addEventListener('click',function(){
+            reset();
+        });
     }
 }
 
