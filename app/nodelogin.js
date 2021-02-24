@@ -73,10 +73,15 @@ app.post('/signup', function(request, response) {
 			}
 			else {
 				if (password==rpassword){
-					console.log(fname); //remove once done 
-					connection.query("insert into accounts values (?,?,?,?)",[username,password,email,fname], function(error, results,fields){
+					if (password.length > 7){
+						console.log(fname); //remove once done 
+						connection.query("insert into accounts values (?,?,?,?)",[username,password,email,fname], function(error, results,fields){
 						response.redirect('/login.html');
 					})
+					}
+					else{
+						alert('Password must be atleast 8 characters.')
+					}
 				}
 				else {
 					alert('Passwords do not match')

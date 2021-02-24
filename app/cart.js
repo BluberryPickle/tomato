@@ -61,7 +61,7 @@ function retrieve() {
             var payamount = document.createElement('div');
             payamount.className='pclass';
             paybar.appendChild(payamount);
-            payamount.innerHTML='<p> Subtotal : '+Number(sessionStorage.getItem('subtot'))+' </p>';    
+            payamount.innerHTML='<p> Subtotal :  ₹'+Number(sessionStorage.getItem('subtot'))+' </p>';    
 
     }
     }
